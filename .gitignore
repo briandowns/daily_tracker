@@ -12,5 +12,5 @@ tests/log.c
 bin
 
 tmp/
-eod_gen
+daily_tracker
 
