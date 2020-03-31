@@ -1,0 +1,11 @@
+[package]
+name = "daily_tracker"
+type = "bin"
+build = "make"
+repository = "github.com/briandowns/daily_tracker"
+version = "0.1.0"
+description = "A small application to output a ready-to-use template to fill in your daily work."
+homepage = ""
+authors = ["Brian Downs"]
+
+[dependencies]
