@@ -105,19 +105,12 @@ main(int argc, char **argv)
         out = stdout;
     }
 
-    char next_work_day[DATE_BUF_SZ];
+    char yesterday[DATE_BUF_SZ];
 
-    // check if today is friday and if so, set the the next work day to the
-    // date of the following Monday.
-    switch (now->tm_wday) {
-        case 5:
-            sprintf(next_work_day, DATE_FORMAT, year, month, now->tm_mday + 3);
-            break;
-        default:
-            sprintf(next_work_day, DATE_FORMAT, year, month, now->tm_mday + 1);
-    }
+    now->tm_mday--;
+    sprintf(yesterday, DATE_FORMAT, year, month, now->tm_mday);
 
-    fprintf(out, DAILY_TRACKER_TEMPLATE, today, next_work_day);
+    fprintf(out, DAILY_TRACKER_TEMPLATE, yesterday, today);
     fclose(out);
 
     return 0;
