@@ -4,7 +4,7 @@ VERSION          := 0.1.0
 BINDIR           := bin
 BINARY           := daily_tracker
 override LDFLAGS +=
-override CFLAGS  += -Dbin_name=$(BINARY) -Ddaily_tracker__version=$(VERSION) -Dgit_sha=$(shell git rev-parse HEAD) -O3
+override CFLAGS  += -static -Dbin_name=$(BINARY) -Ddaily_tracker__version=$(VERSION) -Dgit_sha=$(shell git rev-parse HEAD) -O3
 
 PREFIX = /usr/local
 
