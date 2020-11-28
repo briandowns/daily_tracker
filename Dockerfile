@@ -12,4 +12,4 @@ FROM scratch
 
 COPY --from=builder /daily_tracker/bin/daily_tracker /daily_tracker
 
-CMD ["/daily_tracker"]
+ENTRYPOINT ["/daily_tracker"]
