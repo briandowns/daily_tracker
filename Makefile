@@ -1,5 +1,3 @@
-CC = cc
-
 VERSION          := 0.1.0
 BINDIR           := bin
 BINARY           := daily_tracker
