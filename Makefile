@@ -1,4 +1,4 @@
-VERSION          := 0.1.0
+VERSION          := v0.2.0
 BINDIR           := bin
 BINARY           := daily_tracker
 override LDFLAGS +=

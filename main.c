@@ -41,24 +41,24 @@
     -h          help\n\
     -f          create a new file. default name: yyyy-mm-dd\n"
 
-// DAILY_TRACKER_TEMPLATE contains the base information to be filled out with today's
-// and tomorrow's dates.  This is then ready to be used to be further fleshed out.
-#define DAILY_TRACKER_TEMPLATE  \
-    "### %s Yesterday\n"        \
-    "---\n"                     \
-    "* \n\n"                    \
-    "### %s Today\n"            \
-    "---\n"                     \
-    "* \n\n"                    \
-    "### Blockers\n"            \
-    "---\n"                     \
-    "* \n\n"                    \
-    "### Notes\n"               \
-    "---\n"                     \
+// DAILY_TRACKER_TEMPLATE contains the base information to be filled out with 
+// today's and tomorrow's dates.  This is then ready to be used to be further
+// fleshed out.
+#define DAILY_TRACKER_TEMPLATE \
+    "### %s Yesterday\n"       \
+    "---\n"                    \
+    "* \n\n"                   \
+    "### %s Today\n"           \
+    "---\n"                    \
+    "* \n\n"                   \
+    "### Blockers\n"           \
+    "---\n"                    \
+    "* \n\n"                   \
+    "### PRs\n"                \
+    "---\n"                    \
     "* \n\n"
 
-// DATE_FORMAT for getting the year, month, and day in
-// yyyy-mm-dd format.
+// DATE_FORMAT for getting the year, month, and day in yyyy-mm-dd format.
 #define DATE_FORMAT "%d-%02d-%02d" 
 #define DATE_BUF_SZ 11
 
@@ -76,7 +76,10 @@ main(int argc, char **argv)
                     printf(USAGE, STR(bin_name));
                     return 0;
                 case 'v':
-                    printf("%s %s - git: %s\n", STR(bin_name), STR(daily_tracker_version), STR(git_sha));
+                    printf("%s %s - git: %s\n", 
+                        STR(bin_name), 
+                        STR(daily_tracker_version), 
+                        STR(git_sha));
                     return 0;
                 case 'f':
                     file_output = 1;
@@ -98,7 +101,8 @@ main(int argc, char **argv)
     sprintf(today, DATE_FORMAT, year, month, now->tm_mday);
 
     // check if the output needs to be written to a file. If so, set the output
-    // to the file descriptor derived from "today's" date, otherwise set it to STDOUT.
+    // to the file descriptor derived from "today's" date, otherwise set it to 
+    // STDOUT.
     if (file_output) {
         out = fopen(today, "w");
     } else {
