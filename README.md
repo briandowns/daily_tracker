@@ -4,8 +4,8 @@
 
 Daily Tracker is a simple utility that will output the Daily Tracker template for completion by the user.  Output contains all necessary sections with today's and tomorrow's dates populated.
 
-Supported Compilers        : gcc
-Supported Operating Systems: Linux
+Supported Compilers        : gcc, clang
+Supported Operating Systems: Linux, MacOS, FreeBSD
 
 ## Build and Install
 
@@ -13,12 +13,6 @@ Supported Operating Systems: Linux
 
 ```sh
 make && make install
-```
-
-* With [Flotsam](https://github.com/briandowns/flotsam)
-
-```sh
-flotsam build && flotsam install
 ```
 
 ## Contributing
