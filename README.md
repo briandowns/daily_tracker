@@ -9,8 +9,6 @@ Supported Operating Systems: Linux, MacOS, FreeBSD
 
 ## Build and Install
 
-* With `make`
-
 ```sh
 make && make install
 ```
