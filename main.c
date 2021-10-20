@@ -36,7 +36,7 @@
 
 // USAGE contains the application usage.
 #define USAGE \
-    "usage: %s [-vhf]\n\
+    "usage: %s [-vh] [-f]\n\
     -v          version\n\
     -h          help\n\
     -f          create a new file. default name: yyyy-mm-dd\n"
